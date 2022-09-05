@@ -1,0 +1,553 @@
+{
+	"info": {
+		"_postman_id": "76a65f94-8bf9-4750-81c5-76accb26e5c3",
+		"name": "ProfileMaster",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23000773"
+	},
+	"item": [
+		{
+			"name": "Usuario",
+			"item": [
+				{
+					"name": "saveUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"documento\": \"13897280\",\n    \"nombre\": \"José\",\n    \"apellido\": \"Ávalos\",\n    \"email\": \"avalos.chile@gmail.com\",\n    \"ciudad\": \"Santiago\",\n    \"direccion\": \"Calle tres 1302\",\n    \"fechaNacimiento\": \"1980-04-23\",\n    \"hobbie\": \"Arquitectura\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/usuario/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/usuario/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsuariosByZone",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/usuario/ciudad/Santiago",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"ciudad",
+								"Santiago"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUsuarioById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/usuario/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUsuarioById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/usuario/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"usuario",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ExperienciaLaboral",
+			"item": [
+				{
+					"name": "saveExperienciaLaboral",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcionExperienciaLaboral\": \"Desarrollo, mantención e implementación de plataformas eCommerce, Extranet de proveedores, Sistema de envío de correos multiaplicaciones y otras aplicaciones internas a medida, para empresas del Grupo Emasa Integración de datos desde múltiples plataformas\",\n    \"empresa\": \"Emasa S.A.\",\n    \"fechaInicio\": \"2014-03-21\",\n    \"fechaTermino\": \"2022-09-22\",\n    \"idUsuario\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/experiencialaboral/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"experiencialaboral",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/experiencialaboral/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"experiencialaboral",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteExperienciaLaboralById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/experiencialaboral/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"experiencialaboral",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getExperienciaLaboralById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/experiencialaboral/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"experiencialaboral",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "InformacionAcademica",
+			"item": [
+				{
+					"name": "saveInformacionAcademica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"descripcionInformacionAcademica\": \"Ingeniero en Informática\",\n    \"institucion\": \"IACC\",\n    \"fechaInicio\": \"2014-03-01\",\n    \"fechaTermino\": \"2018-02-17\",\n    \"tipoEducacion\": \"Pre-grado\",\n    \"idUsuario\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/informacionacademica/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"informacionacademica",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/informacionacademica/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"informacionacademica",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInformacionAcademicasByAcademicInformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/informacionacademica/informacionacademica/ingeniero",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"informacionacademica",
+								"informacionacademica",
+								"ingeniero"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteInformacionAcademicaById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/informacionacademica/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"informacionacademica",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getInformacionAcademicaById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/informacionacademica/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"informacionacademica",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Portafolio",
+			"item": [
+				{
+					"name": "savePortafolio",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dispuestoCambioResidencia\": \"Si\",\n    \"aniosExperiencia\": 18,\n    \"descripcion\": \"Ingeniero en Informática, con basta experiencia en implementación de proyectos, diseño de soluciones innovadoras, análisis e integración de información y desarrollo de proyectos web.\",\n    \"idUsuario\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/portafolio/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"portafolio",
+								"save"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/portafolio/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"portafolio",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPortafolioContainsTecnology",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/portafolio/tecnologias/desarrollo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"portafolio",
+								"tecnologias",
+								"desarrollo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPortafolioByYearsOfExperience",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/portafolio/aniosexperiencia/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"portafolio",
+								"aniosexperiencia",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPortafoliosByWillingToChangeResidence",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/portafolio/cambioresidencia/Si",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"portafolio",
+								"cambioresidencia",
+								"Si"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePortafolioById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8052/api/v1/portafolio/delete/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"portafolio",
+								"delete",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPortafolioById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8052/api/v1/portafolio/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8052",
+							"path": [
+								"api",
+								"v1",
+								"portafolio",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
